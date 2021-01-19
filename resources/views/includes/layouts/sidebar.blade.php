@@ -65,15 +65,26 @@
 				<li>
 					<a href="{{ url("/home") }}">
 						<i class="material-icons">dashboard</i>
-						<p>admin</p>
+						<p>Inicio</p>
 					</a>
 				</li>
-
+				<li>
+					<a href="{{ url("/unidade") }}">
+						<i class="material-icons">dashboard</i>
+						<p>Unidade</p>
+					</a>
+				</li>
 			@elseif(Auth::user()->nivel == 'user')
 				<li>
 					<a href="{{ url("/home") }}">
 						<i class="material-icons">dashboard</i>
-						<p>user</p>
+						<p>Inicio</p>
+					</a>
+				</li>
+				<li>
+					<a href="{{ url("/relatorio") }}">
+						<i class="material-icons">dashboard</i>
+						<p>Relatorio</p>
 					</a>
 				</li>
 			@elseif(Auth::user()->nivel == 'user_ti')

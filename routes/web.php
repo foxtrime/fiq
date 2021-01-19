@@ -25,17 +25,19 @@ Route::group(['middleware'=>['auth']], function(){
         });
 /*============================================================================*/
     
-
 /*==================================REGISTRAR=================================*/
 Route::get('/register', 'AuthController@create');
 Route::post('register', 'AuthController@store');
 /*============================================================================*/
 
-
-// Auth::routes();
 //===========================Password=======================================
     Route::get 	('/alterasenha',		'AuthController@AlteraSenha');
 	Route::post	('/salvasenha',   		'AuthController@SalvarSenha');
+//==========================================================================
+
+//==============================RESOURCE====================================
+    Route::resource('unidade',		    'UnidadeController');
+    Route::resource('relatorio',		'RelatorioController');
 //==========================================================================
 
 });

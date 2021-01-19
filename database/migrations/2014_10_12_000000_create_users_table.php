@@ -28,6 +28,13 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+
+            // fk
+            $table->integer('unidade_id')->nullable()->unsigned();
+        });
+
+        Schema::table('users', function($table){
+            $table->foreign('unidade_id')->nullable()->references('id')->on('unidades')->onDelete('cascade');
         });
     }
 

@@ -24,7 +24,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $perfil = Auth::user()->nivel;
+        $perfil = Auth::user();
+
+        // dd($perfil);
 
         // 'super-admin',
         // 'admin',
