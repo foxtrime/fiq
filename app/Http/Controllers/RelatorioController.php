@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Relatorio;
 use App\Models\Unidade;
 use Carbon\Carbon;
+use Auth;
 
 class RelatorioController extends Controller
 {
@@ -26,8 +27,15 @@ class RelatorioController extends Controller
         // foreach($arr as $key => $id){
         //     DB::table('relatorios')->insert(['unidade_id' => $id]);
         // }
+        $user_logado = Auth::user();
+        
+        // dd($user_logado->unidade_id);
 
-        return view('relatorio.index');
+        $relatorios = Relatorio::where('unidade_id','=', $user_logado->unidade_id)->get();
+        
+        // dd($relatorios);
+
+        return view('relatorio.index', compact('relatorios'));
     }
 
     public function  create()
@@ -43,11 +51,15 @@ class RelatorioController extends Controller
     public function edit($id)
     {
 
-        return view('relatorio.update');
+        $relatorio = Relatorio::find($id);
+
+        //  dd($relatorio);
+        return view('relatorio.update', compact('relatorio'));
     }
 
     public function update()
     {
+
 
     }
 

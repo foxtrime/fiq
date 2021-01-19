@@ -15,20 +15,28 @@
 				<div class="toolbar"></div>
 				<div class="material-datatables">
 					<table id="unidades" class="table table-striped table-no-bordered table-hover" width="100%" style="width:100%">
-						{{-- <thead>
+						<thead>
 							<tr>
 								<th>Nome</th>
 								<th class="disabled-sorting text-right" style="width: 16%;">Ações</th>
 							</tr>
 						</thead>
                         <tbody>
-                            @foreach ($unidades as $unidade)
+                            @foreach ($relatorios as $relatorio)
                                 <tr>
-                                    <td>{{$unidade->nome}}</td>
-                                    <td class="actions"></td>
+                                    <td>{{$relatorio->unidade_id}}</td>
+									{{-- <td class="actions"></td> --}}
+									<td><a class="btn_ativa btn btn-warning btn-xs action   botao_acao" 
+										data-toggle="tooltip" 
+										data-placement="bottom" 
+										title="Editar"
+										href="{{ url('relatorio/' . $relatorio->id . '/edit' )}}">  
+										<i class="glyphicon glyphicon-pencil "></i>
+									</a></td>
+									
                                 </tr>
                             @endforeach
-                        </tbody> --}}
+                        </tbody>
                     </table>
 				</div>
 		</div>
