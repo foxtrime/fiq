@@ -27,6 +27,11 @@ class RelatorioController extends Controller
         // foreach($arr as $key => $id){
         //     DB::table('relatorios')->insert(['unidade_id' => $id]);
         // }
+            
+        
+            // $a = Carbon::now()->locale('pt_BR')->format('d-m-Y');
+            // dd($a);
+
         $user_logado = Auth::user();
         
         // dd($user_logado->unidade_id);

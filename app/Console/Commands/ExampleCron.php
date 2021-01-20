@@ -52,6 +52,7 @@ class ExampleCron extends Command
         // dd($arr);
 
         foreach($arr as $key => $id){
+            // DB::table('relatorios')->insert(['unidade_id' => $id]);
             DB::table('relatorios')->insert(['unidade_id' => $id]);
         }
     }
