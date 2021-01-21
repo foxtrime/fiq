@@ -6,6 +6,8 @@ use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
 use App\Models\Relatorio;
 use App\Models\Unidade;
+use Carbon\Carbon;
+
 
 class ExampleCron extends Command
 {
@@ -41,8 +43,8 @@ class ExampleCron extends Command
     public function handle()
     {
          $unidades = Unidade::all();
-
-        $arr = [];
+         
+         $arr = [];
 
         foreach($unidades as $unidade) {
             $a = $unidade->id;
@@ -52,8 +54,9 @@ class ExampleCron extends Command
         // dd($arr);
 
         foreach($arr as $key => $id){
+            $a = Carbon::now()->locale('pt_BR')->format('d-m-Y');
             // DB::table('relatorios')->insert(['unidade_id' => $id]);
-            DB::table('relatorios')->insert(['unidade_id' => $id]);
+            DB::table('relatorios')->insert(['unidade_id' => $id,'data' => $a]);
         }
     }
 }

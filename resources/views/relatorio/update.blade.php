@@ -15,12 +15,16 @@
 			
 				<form action="{{ url('/unidade') }}" method="POST" id="form_relatorio">  
 					{{ csrf_field() }}
-					
+
 					{{--    T.I    --}}
 					<h2>T.I</h2>
-               <!-- =============  A  ============ -->
+			   <!-- =============  A  ============ -->
+					<div class="form-group">
+						<label for="exampleFormControlInput1">{{$perguntas[0]->titulo}}</label>
+					</div>
+
                   <div class="form-check form-check-radio">
-                     <label for="pergunta1">Algum problema com relação ao sistema?</label> 
+                     <label for="pergunta1"></label> 
                      <label class="form-check-label">
                          <input class="form-check-input" type="radio" name="post-format" id="post-format-gallery">Sim
                          <span class="circle">
@@ -33,8 +37,63 @@
                             <span class="check"></span>
                         </span>
                     </label>
-                 </div>
-                     <div class="row" id="gallery-box">
+				 </div>
+				<div class="row" id="gallery-box">
+					<div class="form-group box_funcionario">
+						<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-sm-3 col-lg-3">
+						  <input type="text" class="form-control" placeholder="N° Chamado">
+						</div>
+						<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-sm-3 col-lg-3">
+						  <input type="text" class="form-control" placeholder="Obs">
+						</div>
+						<div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-sm-6 col-lg-6">
+							<a class="btn btn-primary btn-fab btn-fab-mini btn-round">
+								<i class="material-icons">favorite</i>
+							</a>
+						</div>
+					  </div>
+				</div>
+
+                     {{-- <div class="row" id="gallery-box">
+                        <div>
+                           <div class="form-group">
+                              <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-sm-3 col-lg-3">
+                                <input type="text" class="form-control" placeholder="N° Chamado">
+                              </div>
+                              <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-sm-3 col-lg-3">
+                                <input type="text" class="form-control" placeholder="Obs">
+							  </div>
+							  <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-sm-6 col-lg-6">
+                                <a  href="/home" class="btn btn-primary btn-fab btn-fab-mini btn-round">
+									<i class="material-icons">favorite</i>
+								  </a>
+                              </div>
+                            </div>
+                        </div>
+                     </div> --}}
+					<!-- ===========  A  ========== -->
+
+					<!-- ===========  B  ========== -->
+					<div class="form-group">
+						<label for="exampleFormControlInput1">{{$perguntas[1]->titulo}}</label>
+					</div>
+
+                	<div class="form-check form-check-radio">
+                     	<label for="pergunta2"></label> 
+                     	<label class="form-check-label">
+                        	<input class="form-check-input" type="radio" name="pergunta2" id="pergunta2-gallery">Sim
+                         	<span class="circle">
+                            	<span class="check"></span>
+	                        </span>
+      	   	            </label>
+                     	<label class="form-check-label">
+                        	<input class="form-check-input" type="radio" name="pergunta2" checked>Não
+                        	<span class="circle">
+                        	    <span class="check"></span>
+                        	</span>
+                    	</label>
+                	</div>
+                     <div class="row" id="pergunta2_gallery-box">
                         <div>
                            <div class="form-row">
                               <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-sm-6 col-lg-3">
@@ -47,14 +106,147 @@
                             </div>
                         </div>
                      </div>
+					<!-- ===========  B  ========== -->
 
-                   
-            
+					<!-- ===========  C  ========== -->
+					<div class="form-group">
+						<label for="exampleFormControlInput1">{{$perguntas[2]->titulo}}</label>
+					  </div>
 
-					
-					<!-- ===========  A  ========== -->
-					
-					
+                  <div class="form-check form-check-radio">
+                     <label for="pergunta3"></label> 
+                     <label class="form-check-label">
+                         <input class="form-check-input" type="radio" name="pergunta3" id="pergunta3-gallery">Sim
+                         <span class="circle">
+                             <span class="check"></span>
+                         </span>
+                     </label>
+                     <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="pergunta3" checked>Não
+                        <span class="circle">
+                            <span class="check"></span>
+                        </span>
+                    </label>
+                 </div>
+                     <div class="row" id="pergunta3_gallery-box">
+                        <div>
+                           <div class="form-row">
+                              <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-sm-6 col-lg-3">
+                                <input type="text" class="form-control" placeholder="N° Chamado">
+                              </div>
+                              <div class="col">
+                                <input type="text" class="form-control" placeholder="Obs">
+                              </div>
+                              
+                            </div>
+                        </div>
+                     </div>
+					<!-- ===========  C  ========== -->
+
+					<!-- ===========  D  ========== -->
+					<div class="form-group">
+						<label for="exampleFormControlInput1">{{$perguntas[3]->titulo}}</label>
+					  </div>
+
+                  <div class="form-check form-check-radio">
+                     <label for="pergunta4"></label> 
+                     <label class="form-check-label">
+                         <input class="form-check-input" type="radio" name="pergunta4" id="pergunta4-gallery">Sim
+                         <span class="circle">
+                             <span class="check"></span>
+                         </span>
+                     </label>
+                     <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="pergunta4" checked>Não
+                        <span class="circle">
+                            <span class="check"></span>
+                        </span>
+                    </label>
+                 </div>
+                     <div class="row" id="pergunta4_gallery-box">
+                        <div>
+                           <div class="form-row">
+                              <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-sm-6 col-lg-3">
+                                <input type="text" class="form-control" placeholder="N° Chamado">
+                              </div>
+                              <div class="col">
+                                <input type="text" class="form-control" placeholder="Obs">
+                              </div>
+                              
+                            </div>
+                        </div>
+                     </div>
+					<!-- ===========  D  ========== -->
+
+					<!-- ===========  E  ========== -->
+					<div class="form-group">
+						<label for="exampleFormControlInput1">{{$perguntas[4]->titulo}}</label>
+					  </div>
+
+                  <div class="form-check form-check-radio">
+                     <label for="pergunta5"></label> 
+                     <label class="form-check-label">
+                         <input class="form-check-input" type="radio" name="pergunta5" id="pergunta5-gallery">Sim
+                         <span class="circle">
+                             <span class="check"></span>
+                         </span>
+                     </label>
+                     <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="pergunta5" checked>Não
+                        <span class="circle">
+                            <span class="check"></span>
+                        </span>
+                    </label>
+                 </div>
+                     <div class="row" id="pergunta5_gallery-box">
+                        <div>
+                           <div class="form-row">
+                              <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-sm-6 col-lg-3">
+                                <input type="text" class="form-control" placeholder="N° Chamado">
+                              </div>
+                              <div class="col">
+                                <input type="text" class="form-control" placeholder="Obs">
+                              </div>
+                              
+                            </div>
+                        </div>
+                     </div>
+					<!-- ===========  E  ========== -->
+
+					<!-- ===========  F  ========== -->
+					<div class="form-group">
+						<label for="exampleFormControlInput1">{{$perguntas[5]->titulo}}</label>
+					  </div>
+
+                  <div class="form-check form-check-radio">
+                     <label for="pergunta6"></label> 
+                     <label class="form-check-label">
+                         <input class="form-check-input" type="radio" name="pergunta6" id="pergunta6-gallery">Sim
+                         <span class="circle">
+                             <span class="check"></span>
+                         </span>
+                     </label>
+                     <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="pergunta6" checked>Não
+                        <span class="circle">
+                            <span class="check"></span>
+                        </span>
+                    </label>
+                 </div>
+                     <div class="row" id="pergunta6_gallery-box">
+                        <div>
+                           <div class="form-row">
+                              <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-sm-6 col-lg-3">
+                                <input type="text" class="form-control" placeholder="N° Chamado">
+                              </div>
+                              <div class="col">
+                                <input type="text" class="form-control" placeholder="Obs">
+                              </div>
+                              
+                            </div>
+                        </div>
+                     </div>
+					<!-- ===========  F  ========== -->
 					
 					{{-- <div class="row">
 							<div class="col-xs-12 col-sm-6 col-md-6">
@@ -143,6 +335,7 @@
 			}
 		});
 		
+		// ---------------ESSE CARA AQUI É IMPORTANTE-----------------------
 		$('.clonador').click(function(){
 			    $clone = $('.box_funcionario.hide').clone(true);
 			    $clone.removeClass('hide');
@@ -152,10 +345,11 @@
 		$('.btn_remove').click(function(){
 			$(this).parents('.box_funcionario').remove();
 		});
-	
+		// -----------------SOCORROOOOOOOOOOOOOOOOOOOOOOO--------------------
+
 		$("#btn_cancelar").click(function(){
 		  event.preventDefault();
-		  window.location.href='/semsop';
+		  window.location.href='/home';
 	  });
 
 
@@ -163,12 +357,28 @@
         $('#gallery-box').toggle($('#post-format-gallery').prop('checked'));
       }).trigger('init-post-format');
 
+	  $('input[name=pergunta2]').on('click init-pergunta2', function() {
+        $('#pergunta2_gallery-box').toggle($('#pergunta2-gallery').prop('checked'));
+      }).trigger('init-pergunta2');
+
+	  $('input[name=pergunta3]').on('click init-pergunta3', function() {
+        $('#pergunta3_gallery-box').toggle($('#pergunta3-gallery').prop('checked'));
+      }).trigger('init-pergunta3');
+
+	  $('input[name=pergunta4]').on('click init-pergunta4', function() {
+        $('#pergunta4_gallery-box').toggle($('#pergunta4-gallery').prop('checked'));
+      }).trigger('init-pergunta4');
+
+	  $('input[name=pergunta5]').on('click init-pergunta5', function() {
+        $('#pergunta5_gallery-box').toggle($('#pergunta5-gallery').prop('checked'));
+      }).trigger('init-pergunta5');
+
+	  $('input[name=pergunta6]').on('click init-pergunta6', function() {
+        $('#pergunta6_gallery-box').toggle($('#pergunta6-gallery').prop('checked'));
+      }).trigger('init-pergunta6');
+
 	});
 	
-
-
-	
-
 </script>
 
 @endpush

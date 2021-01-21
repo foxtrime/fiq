@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Carbon\Carbon;
 
 class HomeController extends Controller
 {
@@ -25,6 +26,11 @@ class HomeController extends Controller
     public function index()
     {
         $perfil = Auth::user();
+
+        // $a = Carbon::now()->locale('pt_BR')->format('d-m-Y');
+        // dd($a);
+
+        
 
         // dd($perfil);
 

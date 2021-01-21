@@ -16,4 +16,9 @@ class Relatorio extends Model
     {
         return $this->belongsTo('App\Models\Unidade');
     }
+
+    public function ti_pergunta()
+    {
+        return $this->belongsToMany('App\Models\Ti_Pergunta');
+    }
 }
