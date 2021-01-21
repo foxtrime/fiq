@@ -55,16 +55,9 @@ class CreateRelatoriosTable extends Migration
             $table->string('limpeza_farma');
             $table->string('cadastro_foramconfefarma');
             $table->timestamps();
-
             $table->boolean('enviado') ->default(false); 
-
-            
-
-
-
-
-
              // fk
+             
              $table->integer('unidade_id')->nullable()->unsigned();
         });
 

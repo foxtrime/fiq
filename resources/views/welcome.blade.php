@@ -8,6 +8,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
         <!-- Styles -->
         <style>
@@ -61,7 +62,13 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+            .chart {
+                width: 70px;
+                height: 70px;
+            }
         </style>
+
+        
     </head>
     <body>
         <div class="flex-center position-ref full-height">
