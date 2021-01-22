@@ -22,55 +22,38 @@
 					<div class="form-group">
 						<label for="exampleFormControlInput1">{{$perguntas[0]->titulo}}</label>
 					</div>
-
-                  <div class="form-check form-check-radio">
-                     <label for="pergunta1"></label> 
-                     <label class="form-check-label">
-                         <input class="form-check-input" type="radio" name="post-format" id="post-format-gallery">Sim
-                         <span class="circle">
-                             <span class="check"></span>
-                         </span>
-                     </label>
-                     <label class="form-check-label">
-                        <input class="form-check-input" type="radio" name="post-format" checked>Não
-                        <span class="circle">
-                            <span class="check"></span>
-                        </span>
-                    </label>
-				 </div>
-				<div class="row" id="gallery-box">
-					<div class="form-group box_funcionario">
-						<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-sm-3 col-lg-3">
-						  <input type="text" class="form-control" placeholder="N° Chamado">
-						</div>
-						<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-sm-3 col-lg-3">
-						  <input type="text" class="form-control" placeholder="Obs">
-						</div>
-						<div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-sm-6 col-lg-6">
-							<a class="btn btn-primary btn-fab btn-fab-mini btn-round">
-								<i class="material-icons">favorite</i>
-							</a>
-						</div>
-					  </div>
-				</div>
-
-                     {{-- <div class="row" id="gallery-box">
-                        <div>
-                           <div class="form-group">
-                              <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-sm-3 col-lg-3">
-                                <input type="text" class="form-control" placeholder="N° Chamado">
-                              </div>
-                              <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-sm-3 col-lg-3">
-                                <input type="text" class="form-control" placeholder="Obs">
-							  </div>
-							  <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-sm-6 col-lg-6">
-                                <a  href="/home" class="btn btn-primary btn-fab btn-fab-mini btn-round">
+                  	<div class="form-check form-check-radio">
+                  	   <label for="pergunta1"></label> 
+                  	   <label class="form-check-label">
+                  	       <input class="form-check-input" type="radio" name="post-format" id="post-format-gallery">Sim
+                  	       <span class="circle">
+                  	           <span class="check"></span>
+                  	       </span>
+                  	   </label>
+                  	   <label class="form-check-label">
+                  	      <input class="form-check-input" type="radio" name="post-format" checked>Não
+                  	      <span class="circle">
+                  	          <span class="check"></span>
+                  	      </span>
+                  	  </label>
+				 	</div>
+					<div class="row" id="gallery-box">
+						<div class="form-group box_funcionario ">
+							<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-sm-3 col-lg-3">
+							  <input type="text" class="form-control" placeholder="N° Chamado">
+							</div>
+							<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-sm-3 col-lg-3">
+							  <input type="text" class="form-control" placeholder="Obs">
+							</div>
+							<div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-sm-6 col-lg-6">
+								<a class="clonarei btn btn-primary btn-fab btn-fab-mini btn-round">
 									<i class="material-icons">favorite</i>
-								  </a>
-                              </div>
-                            </div>
-                        </div>
-                     </div> --}}
+								</a>
+							</div>
+						  </div>
+					</div>
+
+    
 					<!-- ===========  A  ========== -->
 
 					<!-- ===========  B  ========== -->
@@ -95,7 +78,7 @@
                 	</div>
                      <div class="row" id="pergunta2_gallery-box">
                         <div>
-                           <div class="form-row">
+                           <div class="form-row pergunta2">
                               <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-sm-6 col-lg-3">
                                 <input type="text" class="form-control" placeholder="N° Chamado">
                               </div>
@@ -324,6 +307,7 @@
 @endsection
 @push('scripts')
 <script type="text/javascript">
+
 	$(function(){
 		$('body').submit(function(event){
 			if ($(this).hasClass('enviar-relatorio')) {
@@ -336,15 +320,19 @@
 		});
 		
 		// ---------------ESSE CARA AQUI É IMPORTANTE-----------------------
-		$('.clonador').click(function(){
-			    $clone = $('.box_funcionario.hide').clone(true);
-			    $clone.removeClass('hide');
-			    $('#funcionario').append($clone);
-		});
 
-		$('.btn_remove').click(function(){
-			$(this).parents('.box_funcionario').remove();
-		});
+
+		// $('.clonador').click(function(){
+		// 	    $clone = $('.box_funcionario.hide').clone(true);
+		// 	    $clone.removeClass('hide');
+		// 	    $('#funcionario').append($clone);
+		// 	});
+
+		// $('.btn_remove').click(function(){
+		// 	$(this).parents('.box_funcionario').remove();
+		// });
+
+		
 		// -----------------SOCORROOOOOOOOOOOOOOOOOOOOOOO--------------------
 
 		$("#btn_cancelar").click(function(){
