@@ -74,6 +74,6 @@ class CreateRelatoriosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('relatorios');
+        Schema::dropIfExists('relatorios'); 
     }
 }

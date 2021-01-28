@@ -38,6 +38,7 @@ Route::post('register', 'AuthController@store');
 //==============================RESOURCE====================================
     Route::resource('unidade',		    'UnidadeController');
     Route::resource('relatorio',		'RelatorioController');
+    Route::resource('funcionarios',		'FuncionariosController');
 //==========================================================================
 
 });

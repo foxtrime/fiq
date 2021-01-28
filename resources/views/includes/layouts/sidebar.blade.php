@@ -61,6 +61,7 @@
 					<p>super-admin</p>
 				</a>
 			</li>
+	
 			@elseif(Auth::user()->nivel == 'admin')
 				<li>
 					<a href="{{ url("/home") }}">
@@ -72,6 +73,12 @@
 					<a href="{{ url("/unidade") }}">
 						<i class="material-icons">dashboard</i>
 						<p>Unidade</p>
+					</a>
+				</li>
+				<li>
+			<a href="{{ url("/funcionarios") }}">
+						<i class="material-icons">dashboard</i>
+						<p>Funcionários</p>
 					</a>
 				</li>
 			@elseif(Auth::user()->nivel == 'user')
@@ -101,6 +108,8 @@
 						<p>user_infra</p>
 					</a>
 				</li>
+				<li>
+				
 			@endif
 			
 			{{-- @if ($guardagcmm || $guardagerente )
